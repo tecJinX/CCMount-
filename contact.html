@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="assets/css/best-carousel-slide.css">
     <link rel="stylesheet" href="assets/css/Bootstrap-4---Payment-Form.css">
     <link rel="stylesheet" href="assets/css/Bootstrap-Payment-Form.css">
+    <link rel="stylesheet" href="assets/css/Brands.css">
     <link rel="stylesheet" href="assets/css/Contact-Form-Clean.css">
     <link rel="stylesheet" href="assets/css/Footer-Dark.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
@@ -38,18 +39,33 @@
                 </ul>
             </div><a class="btn btn-outline-primary border rounded border-white" role="button" style="font-family: Montserrat, sans-serif;font-size: 14px;color: rgb(255,255,255);" href="hire_technician.html"><strong>Send message</strong></a></div>
     </nav>
+    
     <div class="contact-clean">
-        <form class="text-center" method="post" style="margin-top: 30px;">
+        <div class="contact-clean">
+            <!--Update the URL for thank you page on form submit -->
+            <iframe
+            name="hidden_iframe"
+            id="hidden_iframe"
+            style="display: none"
+            onload="if(submitted) {window.location='http://ccmount.com/';}"
+          ></iframe>
+   
+          <!-- Update the Google forms URL in action-->
+          <form
+            action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScNLGNezPJNZSlkVixQ4aIMLIzzd5wdblZEbdu0OKPcRlwDIg/formResponse"
+            method="post"
+            target="hidden_iframe"
+            onsubmit="return validateForm(); "class="text-center" method="post" style="margin-top: 30px;">
             <div>
                 <h1 class="text-center" style="padding: 0px;">Contact us</h1>
                 <div>
                     <p class="text-center" style="padding: 20px;">Fill up the form below and wait for our technicians to call you back within 30 minutes</p>
                 </div>
             </div>
-            <div class="form-group"><input class="form-control" type="text" name="name" placeholder="Name"></div>
-            <div class="form-group"><input class="form-control" type="email" placeholder="Email"></div>
-            <div class="form-group"><input class="form-control" type="tel" placeholder="Phone"></div>
-            <div class="form-group"><textarea class="form-control" name="message" placeholder="Message" rows="14"></textarea></div>
+            <div class="form-group"><input class="form-control" type="text" id="name" placeholder="Name" name="entry.840568578"></div>
+            <div class="form-group"><input class="form-control" type="email" id="email" placeholder="Email" name="entry.143436084"></div>
+            <div class="form-group"><input class="form-control" type="tel" id="phone" placeholder="Phone" name="entry.1771732457"></div>
+            <div class="form-group"><textarea class="form-control" id="message" name="entry.1969877390&quot;" placeholder="Message" rows="14"></textarea></div>
             <div class="form-group text-right"><button class="btn btn-primary" type="submit">send MESSAGE</button></div>
         </form>
     </div>
@@ -60,7 +76,7 @@
                 <p class="text-center" style="padding: 20px;">Enter your Email to get started with our weekly email newsletter, stay connected with us!</p>
             </div>
             <form class="form-inline" method="post">
-                <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Your Email"></div>
+                <div class="form-group"><input class="form-control" type="email" id="email" placeholder="Your Email address" name="entry.143436084"></div>
                 <div class="form-group"><button class="btn btn-primary" type="submit">Subscribe </button></div>
             </form>
         </div>
@@ -100,6 +116,62 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/smart-forms.min.js"></script>
     <script src="assets/js/Bootstrap-4---Payment-Form.js"></script>
+
+    <script type="text/javascript">
+        function validateName() {
+          var name = document.getElementById("name").value;
+          if (name.length == 0) {
+            alert("Name can't be blank");
+            return false;
+          }
+          if (!name.match(/^[a-zA-Z]{3,}(?: [a-zA-Z]+){0,2}$/)) {
+            alert("Please enter your correct name"); //Validation Message
+            return false;
+          }
+          return true;
+        }
+  
+        function validatePhone() {
+          var phone = document.getElementById("phone").value;
+          if (phone.length == 0) {
+            alert("Phone number can't be blank"); //Validation Message
+            return false;
+          }
+  
+          if (!phone.match(/^[0]?[789]\d{9}$/)) {
+            alert("Please enter a correct phone number"); //Validation Message
+            return false;
+          }
+  
+          return true;
+        }
+  
+        function validateEmail() {
+          var email = document.getElementById("email").value;
+          if (email.length == 0) {
+            alert("Email can't be blank"); //Validation Message
+            return false;
+          }
+  
+          if (!email.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
+            alert("Please enter a correct email address"); //Validation Message
+            return false;
+          }
+  
+          return true;
+        }
+  
+        function validateForm() {
+          if (!validateName() || !validatePhone() || !validateEmail()) {
+            alert("Form not submitted"); //Validation Message
+            return false;
+          } else {
+            submitted = true;
+            return true;
+          }
+        }
+      </script>
+  
 </body>
 
 </html>
