@@ -62,10 +62,6 @@ p.hero-subtitle {
   /*box-sizing: inherit;*/
 }
 
-*:before, *:after {
-  /*box-sizing: inherit;*/
-}
-
 span {
   font-style: inherit;
   font-weight: inherit;
@@ -97,5 +93,42 @@ span {
 
 .size {
   padding: 40px;
+}
+
+.navbar-light .navbar-brand, .navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
+  background-image: url("../../assets/img/LogoMakr-5IFapt.png");
+  background-repeat: no-repeat;
+  height: 40px;
+  background-position: center;
+  background-size: 70%;
+}
+
+.navbar-light .navbar-brand, .navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
+}
+
+.btn.btn-primary {
+  background-color: #055ada;
+}
+
+.navbar-dark .navbar-brand, .navbar-dark .navbar-brand:focus, .navbar-dark .navbar-brand:hover {
+  background-image: url("../../assets/img/LogoMakr-5IFapt.png");
+  background-position: center;
+  background-size: 106%;
+  padding-right: 24px;
+  padding-left: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 40px;
+  margin-right: 33px;
+  margin-top: -2px;
+}
+
+.btn.btn-primary {
+  border-radius: 35px;
+}
+
+.masthead-heading {
 }
 

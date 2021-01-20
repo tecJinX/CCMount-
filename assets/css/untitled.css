@@ -1,0 +1,38 @@
+header.masthead .masthead-content .masthead-subheading {
+  padding: 0px;
+  padding-top: 10px;
+  padding-bottom: 25px;
+  font-size: 42px;
+}
+
+@media (min-width: 300px) {
+  header.masthead .masthead-content .masthead-subheading {
+    header.masthead .masthead-content .masthead-subheading {  padding: 0px;
+    padding-top: 10px;
+    padding-bottom: 25px;
+    font-size: 42px;
+  }
+}
+
+hero-button.plat {
+  border-radius: 50px;
+}
+
+.btn.btn-outline-primary.hero-button.plat {
+  color: rgb(255,255,255);
+  font-size: 18px;
+  font-family: Lato, sans-serif;
+}
+
+.btn.btn-outline-primary.hero-button.plat {
+  border-radius: 30px;
+  border-color: #ffffff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.btn.btn-outline-primary {
+  border-radius: 30px;
+  border-color: #fff;
+}
+
